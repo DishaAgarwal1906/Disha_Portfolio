@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light background */
+            color: #333; /* Dark text color */
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .navbar-brand {
+            color: #333;
+            font-weight: bold;
+        }
+        .project-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .card-text {
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .date {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+        .tech-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background-color: #e1e8ed;
+            color: #333;
+            padding: 5px 8px;
+            border-radius: 12px;
+            margin: 0 5px 5px 0;
+        }
+        .btn-grey {
+            background-color: #6c757d; /* Greyish color */
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+        .btn-grey:hover {
+            background-color: #5a6268;
+        }
+        .read-more {
+            background-color: #f8f9fa;
+            color: #6c757d; /* Greyish color */
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .read-more:hover {
+            background-color: #e2e6ea;
+            color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+    </nav>
+
+    <!-- Container for Project Cards -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Project Card 1 -->
+            <div class="col-md-4">
+                <div class="card project-card mb-4">
+                    <img src="project1.jpg" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">COVID-19 Detection from X-Ray Images</h5>
+                        <span class="date">2024-06-29</span>
+                        <p class="card-text">An image detector that identifies COVID-19 using chest X-ray images.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <a href="#" class="btn btn-grey mt-3">Watch Demo</a>
+                    </div>
+                    <div class="read-more">Read More</div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="col-md-4">
+                <div class="card project-card mb-4">
+                    <img src="project2.jpg" class="card-img-top" alt="Project 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Hollywood Actor Classifier</h5>
+                        <span class="date">2024-06-24</span>
+                        <p class="card-text">An image classifier that identifies Hollywood actors based on facial features.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                        <a href="#" class="btn btn-grey mt-3">Watch Demo</a>
+                    </div>
+                    <div class="read-more">Read More</div>
+                </div>
+            </div>
+            
+            <!-- Project Card 3 -->
+            <div class="col-md-4">
+                <div class="card project-card mb-4">
+                    <img src="project3.jpg" class="card-img-top" alt="Project 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Zomato Restaurant Analysis</h5>
+                        <span class="date">2024-02-06</span>
+                        <p class="card-text">Analyzing Zomato data to uncover insights about restaurant trends and customer preferences.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Visualization</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <a href="#" class="btn btn-grey mt-3">Read More</a>
+                    </div>
+                    <div class="read-more">Read More</div>
+                </div>
+            </div>
+            
+            <!-- Additional project cards can be added here -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
