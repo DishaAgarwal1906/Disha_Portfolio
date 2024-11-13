@@ -15,11 +15,11 @@
         }
 
         body {
-            background-color: #f4f4f9;
+            background-color: #f7f9fc; /* Light background color */
             color: #333;
             display: flex;
             justify-content: center;
-            padding: 60px 20px 20px; /* Extra padding for navbar */
+            padding: 80px 20px 20px; /* Extra padding for navbar */
         }
 
         /* Navbar Styling */
@@ -28,7 +28,7 @@
             align-items: center;
             justify-content: space-between;
             background-color: #ffffff;
-            padding: 10px 20px;
+            padding: 15px 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 1200px;
@@ -65,18 +65,19 @@
         .portfolio {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1000px;
+            gap: 20px;
+            max-width: 1200px;
             width: 100%;
-            margin-top: 80px;
+            margin-top: 100px;
+            justify-content: center;
         }
 
         /* Project Card Styling */
         .card {
             background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            width: 320px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -85,13 +86,14 @@
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 6px 15px rgba(128, 128, 128, 0.3); /* Greyish shadow on hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
         }
 
         .card img {
             width: 100%;
             height: 180px;
             object-fit: cover;
+            border-bottom: 1px solid #eee;
         }
 
         .card-content {
@@ -111,8 +113,8 @@
 
         .card-date {
             font-size: 14px;
-            color: #777;
-            margin-bottom: 15px;
+            color: #888;
+            margin-bottom: 10px;
         }
 
         .card-description {
@@ -134,6 +136,7 @@
             padding: 5px 10px;
             border-radius: 15px;
             font-size: 12px;
+            font-weight: bold;
         }
 
         /* Button Styling */
@@ -150,13 +153,13 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            color: #fff;
-            background-color: #6c757d;
+            color: #ffffff;
+            background-color: #0073b1; /* Updated button color */
             transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #5a6268;
+            background-color: #005a8e;
         }
     </style>
 </head>
