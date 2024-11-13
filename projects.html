@@ -19,7 +19,7 @@
             color: #333;
             display: flex;
             justify-content: center;
-            padding: 20px;
+            padding: 60px 20px 20px; /* Extra padding for navbar */
         }
 
         /* Navbar Styling */
@@ -33,6 +33,9 @@
             width: 100%;
             max-width: 1200px;
             border-radius: 8px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
         }
 
         .navbar .logo {
@@ -62,11 +65,10 @@
         .portfolio {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: 1200px;
+            justify-content: space-between;
+            max-width: 1000px;
             width: 100%;
-            margin-top: 40px;
+            margin-top: 80px;
         }
 
         /* Project Card Styling */
@@ -149,12 +151,12 @@
             text-decoration: none;
             font-weight: bold;
             color: #fff;
-            background-color: #0073b1;
+            background-color: #6c757d;
             transition: background-color 0.3s ease;
         }
 
         .button:hover {
-            background-color: #005582;
+            background-color: #5a6268;
         }
     </style>
 </head>
