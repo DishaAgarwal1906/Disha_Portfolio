@@ -1,19 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+        .project-card {
+            transition: transform 0.2s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .card-text {
+            font-size: 0.9rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+    </style>
 </head>
 <body>
 
-<h1>My Website</h1>
-<p>A website created by me.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+    </nav>
 
+    <!-- Container for Project Cards -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Project Card 1 -->
+            <div class="col-md-4">
+                <div class="card project-card mb-4">
+                    <img src="project1.jpg" class="card-img-top" alt="Project 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">COVID-19 Detection from X-Ray Images</h5>
+                        <p class="card-text">Building an Image Detector that detects COVID-19 from chest X-ray images.</p>
+                        <a href="#" class="btn btn-primary">Watch Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="col-md-4">
+                <div class="card project-card mb-4">
+                    <img src="project2.jpg" class="card-img-top" alt="Project 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Hollywood Actor Classifier</h5>
+                        <p class="card-text">Building an Image Classifier to identify various Hollywood actors based on facial features.</p>
+                        <a href="#" class="btn btn-primary">Watch Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 3 -->
+            <div class="col-md-4">
+                <div class="card project-card mb-4">
+                    <img src="project3.jpg" class="card-img-top" alt="Project 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Zomato Restaurant Analysis</h5>
+                        <p class="card-text">Analyzing the Zomato Restaurant dataset to gain insights into the restaurant business.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more project cards as needed -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
