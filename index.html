@@ -1,86 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Disha Agarwal's Data Science Portfolio">
-  <title>Disha Agarwal - Data Science Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Add icons for libraries and skills if needed -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disha Agarwal - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <span class="nav-name">Disha Agarwal</span>
+        </div>
+        <div class="navbar-right">
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="essays.html">Essays</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
+    
+    <header>
+        <h1>My Projects</h1>
+    </header>
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <div class="brand">
-      <img src="profile.jpg" alt="Disha Agarwal" class="profile-icon">
-      <h1>Disha Agarwal</h1>
+    <div class="project-cards">
+        <div class="card">
+            <img src="project1.jpg" alt="Project 1 Image">
+            <h2>COVID-19 Detection from X-Ray Images</h2>
+            <p class="date">2024-06-29</p>
+            <p>An image detector that identifies COVID-19 using chest X-ray images.</p>
+            <div class="tech-tags">
+                <span>Machine Learning</span>
+                <span>Deep Learning</span>
+                <span>Python</span>
+            </div>
+            <button class="demo-button">Watch Demo</button>
+            <div class="read-more">Read More</div>
+        </div>
+        <div class="card">
+            <img src="project2.jpg" alt="Project 2 Image">
+            <h2>Hollywood Actor Classifier</h2>
+            <p class="date">2024-06-24</p>
+            <p>An image classifier that identifies Hollywood actors based on facial features.</p>
+            <div class="tech-tags">
+                <span>Computer Vision</span>
+                <span>Deep Learning</span>
+                <span>OpenCV</span>
+            </div>
+            <button class="demo-button">Watch Demo</button>
+            <div class="read-more">Read More</div>
+        </div>
+        <div class="card">
+            <img src="project3.jpg" alt="Project 3 Image">
+            <h2>Zomato Restaurant Analysis</h2>
+            <p class="date">2024-02-06</p>
+            <p>Analyzing Zomato data to uncover insights about restaurant trends and customer preferences.</p>
+            <div class="tech-tags">
+                <span>Data Analysis</span>
+                <span>Visualization</span>
+                <span>Python</span>
+            </div>
+            <button class="demo-button">Read More</button>
+        </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#essays">Essays</a></li>
-      <li><a href="#resume">Resume</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Introduction Section -->
-<section class="intro">
-  <h2>Welcome to My Portfolio</h2>
-  <p>
-    I'm a passionate data scientist with experience in machine learning, data analysis, and a goal to make a positive impact on society. Below are some of my key projects and achievements.
-  </p>
-</section>
-
-<!-- Project Section -->
-<section id="projects" class="projects">
-  <h2>Projects</h2>
-  <div class="project-card">
-    <img src="project1.jpg" alt="Project 1 Image">
-    <h3>COVID-19 Detection from X-Ray Images</h3>
-    <p class="date">2024-06-29</p>
-    <p>An image detector that identifies COVID-19 using chest X-ray images.</p>
-    <div class="tags">
-      <span>Machine Learning</span>
-      <span>Deep Learning</span>
-      <span>Python</span>
-    </div>
-    <div class="metrics">
-      <strong>Accuracy:</strong> 95% &nbsp;|&nbsp; <strong>Deployment:</strong> Prototype
-    </div>
-    <button class="watch-demo">Watch Demo</button>
-    <a href="project-details.html" class="read-more">Read More</a>
-  </div>
-
-  <!-- Repeat similar blocks for each project -->
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="skills">
-  <h2>Skills</h2>
-  <div class="skills-container">
-    <div class="skill-item">Python - Advanced</div>
-    <div class="skill-item">SQL - Intermediate</div>
-    <div class="skill-item">Machine Learning - Intermediate</div>
-    <!-- Add more skills as needed -->
-  </div>
-</section>
-
-<!-- Essays Section -->
-<section id="essays" class="essays">
-  <h2>Essays</h2>
-  <p>Here, you can read my thoughts on various data science topics and findings from my projects.</p>
-  <!-- Add essay cards or links to essays -->
-</section>
-
-<!-- Resume Section -->
-<section id="resume" class="resume">
-  <h2>Resume</h2>
-  <p>
-    <a href="Disha_Agarwal_Resume.pdf" download>Download my Resume</a>
-  </p>
-</section>
-
 </body>
 </html>
