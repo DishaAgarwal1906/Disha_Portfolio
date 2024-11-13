@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,21 +22,40 @@
             padding: 20px;
         }
 
-        /* Header Styling */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1200px;
+            border-radius: 8px;
         }
 
-        header h1 {
-            font-size: 32px;
+        .navbar .logo {
+            font-size: 24px;
             font-weight: bold;
             color: #333;
         }
 
-        header p {
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
             font-size: 16px;
             color: #555;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #0073b1;
         }
 
         /* Portfolio Container */
@@ -47,6 +66,7 @@
             gap: 20px;
             max-width: 1200px;
             width: 100%;
+            margin-top: 40px;
         }
 
         /* Project Card Styling */
@@ -58,12 +78,12 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 15px rgba(128, 128, 128, 0.3); /* Greyish shadow on hover */
         }
 
         .card img {
@@ -140,8 +160,15 @@
 </head>
 <body>
     <header>
-        <h1>Disha Agarwal</h1>
-        <p>My Portfolio</p>
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">Disha Agarwal</div>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#essays">Essays</a>
+                <a href="#resume">Resume</a>
+            </div>
+        </div>
     </header>
 
     <div class="portfolio">
