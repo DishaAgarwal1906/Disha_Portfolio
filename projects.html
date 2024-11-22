@@ -164,7 +164,12 @@
 
         /* Ensure the 4th card moves to the next line */
         .card:nth-child(4) {
-            flex-basis: 100%; /* Make the 4th card take up the full row */
+ /* Make the 4th card take up the full row */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
         }
     </style>
 </head>
