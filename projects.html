@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -381,5 +381,487 @@
 
        
     </div>
+</body>
+</html>
+ -->
+
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2, maximum-scale=1.2">
+    <title>Disha Agarwal - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f9fc; /* Light background */
+            color: #333;
+            font-size: 18px; /* Increased font size */
+            padding-top: 100px; /* Extra padding for navbar */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 25px 40px; /* Increased padding */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 26px; /* Increased font size */
+            font-weight: bold;
+            color: #333;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 25px; /* Increased gap */
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            font-size: 18px; /* Increased font size */
+            color: #555;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #0073b1;
+        }
+
+        /* Intro Section */
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 60px;
+            max-width: 1400px; /* Increased width */
+            margin: auto;
+            gap: 40px; /* Increased gap */
+        }
+
+        .intro .text-content h2 {
+            font-size: 3rem; /* Increased font size */
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+
+        .intro .text-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .intro .text-content strong {
+            color: #222;
+            font-weight: bold;
+        }
+
+        .intro .contact p {
+            font-weight: bold;
+            color: #222;
+        }
+
+        .intro .contact a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            margin-right: 1.2rem;
+            color: #fff;
+            background-color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.9rem 1.5rem; /* Increased padding */
+            font-size: 1.1rem; /* Increased font size */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .intro .contact a:hover {
+            background-color: #000;
+        }
+
+        .intro .image-container img {
+            width: 400px; /* Increased image size */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px; /* Increased gap */
+            max-width: 1400px; /* Increased width */
+            margin: 60px auto;
+            justify-content: center;
+        }
+
+         /* Project Card Styling */
+         .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 30.33%; /* Three cards per row */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Button Styling */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .button {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #333333; /* Updated button color */
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #005a8e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0; /* Increased padding */
+            background-color: #f8f8f8;
+            font-size: 1.2rem; /* Increased font size */
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content stays the same -->
+         <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Disha Agarwal</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#faqs">FAQs</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <div class="text-content">
+                <h2>Hi! I'm Disha Agarwal.</h2>
+                <p>I'm a Data Analyst.</p>
+                <p>I'll address your unique data and business needs to <strong>fuel</strong> your business growth.</p>
+                <p>I've worked on <strong>Excel, SQL, Power BI,</strong> and <strong>Python</strong> personal projects under different domains and industries.</p>
+                <div class="contact">
+                    <p>📬 Want to work together?</p>
+                    <a href="mailto:youremail@example.com">Send me an email</a>
+                    <a href="https://linkedin.com/in/HaripriyaKoduru" target="_blank">DM me on LinkedIn</a>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="C:\Users\Admin\OneDrive\Desktop\pythonVsCode\imgPortfolio.jpg" alt="Disha Agarwal">
+            </div>
+        </section>
+
+        <section id="projects" class="portfolio">
+            <!-- Reuse project cards here -->
+            <!-- Example card -->
+            <div class="portfolio">
+                <!-- Project 1 -->
+                <div class="card">
+                    <img src="gif/CreditScore1-ezgif.com-optimize.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Credit Risk Analysis in Python</h2>
+                            <p class="card-date">2024-11-16</p>
+                            <p class="card-description">The model aims to predict if a loan applicant is a good borrower or a bad borrower.</p>
+                            <div class="tags">
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">EDA</span>
+                                <span class="tag">Logistic Regression</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/Credit-Risk-Analysis" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+         <!-- Project 9 -->
+                <div class="card">
+                    <img src="gif/purchase.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Customer Data Analysis</h2>
+                            <p class="card-date">2024-11-06</p>
+                            <p class="card-description">This project explores customer purchase behavior to answer three key questions: Will the customer buy products or not? If yes, which brand will the customer choose? How many products will the customer likely buy</p>
+                            <div class="tags">
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">KMeans</span>
+                                <span class="tag">Logistic Regression</span>
+                                <span class="tag">ML</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/Customer-Data-Analytics-" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        
+                 <!-- Project 8 -->
+                <div class="card">
+                    <img src="gif/sales.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Global Sales Data Analysis</h2>
+                            <p class="card-date">2023-05-06</p>
+                            <p class="card-description">Analyzed data of Global Sales, and made a PowerBI dashboard with DAX Queries and tooltip.</p>
+                            <div class="tags">
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">PowerBI</span>
+                                <span class="tag">DAX</span>
+                                <span class="tag">ToolTip</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/Global-Sales-Analysis" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="card">
+                    <img src="gif/trading.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Algorithmic Trading Portfolio Allocator</h2>
+                            <p class="card-date">2024-04-24</p>
+                            <p class="card-description">Python-based algorithmic trading tool for efficient portfolio allocation across S&P 500 stocks.</p>
+                            <div class="tags">
+                                <span class="tag">Web Scraping</span>
+                                <span class="tag">API</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://nbviewer.org/github/DishaAgarwal1906/Algorithmic_trading/blob/main/ALGORITHMIC.ipynb" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Project 3 -->
+                <div class="card">
+                    <img src="gif/uberupdated.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Uber Data Analysis</h2>
+                            <p class="card-date">2023-02-06</p>
+                            <p class="card-description">Analyzing Uber data to uncover insights about high-demand trends and customer preferences.</p>
+                            <div class="tags">
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/UberDataAnalysis" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Project 4 -->
+                <div class="card">
+                    <img src="gif/visa.webp">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">UK Visa Sponsors</h2>
+                            <p class="card-date">2024-02-06</p>
+                            <p class="card-description">Analyzed data on UK company visa sponsors, including insights and top companies by turnover.</p>
+                            <div class="tags">
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Power BI</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/PowerBI-Dashboard" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                  <!-- Project 5 -->
+                  <div class="card">
+                    <img src="gif/customer.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Customer Churn Analysis</h2>
+                            <p class="card-date">2024-07-06</p>
+                            <p class="card-description">Understanding customer response on telemarketing campaign and finding customer profile who will be affected by campaigns so we will focus on that customer..</p>
+                            <div class="tags">
+                                <span class="tag">EDA</span>
+                                <span class="tag">Decision Tree</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">KNN</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/Customer-Churn-Analysis" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                  <!-- Project 6 -->
+                <div class="card">
+                    <img src="gif/data-analysis.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">URL Shortner Data Analysis</h2>
+                            <p class="card-date">2023-12-06</p>
+                            <p class="card-description">Analyzed data of Bitly, including insights of top devices used for URL shortening and top time zones according to window and non window users.</p>
+                            <div class="tags">
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">EDA</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/Bitly-Data-From-USA-Govt./blob/4708425049a5c433964b0c84d5023548db3571c4/bitly-data-from-usa-govt.ipynb" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        
+                 <!-- Project 7 -->
+                <div class="card">
+                    <img src="gif/titanic.gif">
+                    <div class="card-content">
+                        <div>
+                            <h2 class="card-title">Titanic Data Analysis</h2>
+                            <p class="card-date">2023-05-06</p>
+                            <p class="card-description">Analyzed data of Titanic, including insights of people who survived according to passenger class .</p>
+                            <div class="tags">
+                                <span class="tag">Data Analysis</span>
+                                <span class="tag">Visualization</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">EDA</span>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <a href="#" class="button">Watch Demo</a>
+                            <a href="https://github.com/DishaAgarwal1906/Exploring-Titanic-Dataset-/blob/main/exploring-titanic-dataset.ipynb" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+        
+                
+        
+               
+            </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 Disha Agarwal. All rights reserved.
+    </footer>
 </body>
 </html>
