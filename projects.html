@@ -9,34 +9,15 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS
-  emailjs.init("8tlkZWeySUT1S3aXJ");
-
-  // Handle form submission
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const form = e.target;
-    emailjs
-      .sendForm("service_7oq5zhe", "template_pw3e8mn", form)
-      .then(() => {
-        Swal.fire({
-          title: "Thank You",
-          text: "Your message has been sent.",
-          icon: "success",
-        });
-        form.reset();
-      })
-      .catch((error) => {
-        console.error("Failed to send email", error);
-        Swal.fire({
-          title: "Error",
-          text: "There was an issue sending your message. Please try again later.",
-          icon: "error",
-        });
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "8tlkZWeySUT1S3aXJ",
       });
-  });
+   })();
 </script>
 
 </script>
@@ -653,7 +634,7 @@ h2 {
       </label>
       <label for="email" class="contact-label">
         <span class="text-md">Your Email</span>
-        <input type="email" class="contact-input text-md" name="from_email" id="email" required />
+        <input type="email" class="contact-input text-md" name="email_id" id="email" required />
       </label>
     </div>
     <label for="message" class="contact-label">
