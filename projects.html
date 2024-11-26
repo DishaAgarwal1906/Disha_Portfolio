@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.2, maximum-scale=1.2">
     <title>Disha Agarwal - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init("your-public-key-here");
+
+  // Handle form submission
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    emailjs
+      .sendForm("your-service-id", "your-template-id", form)
+      .then(() => {
+        Swal.fire({
+          title: "Thank You",
+          text: "Your message has been sent.",
+          icon: "success",
+        });
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Failed to send email", error);
+        Swal.fire({
+          title: "Error",
+          text: "There was an issue sending your message. Please try again later.",
+          icon: "error",
+        });
+      });
+  });
+</script>
+
+</script>
+
     <style>
         /* General Reset and Styling */
         * {
@@ -264,6 +300,71 @@
     font-weight: bold;
     color: #333;
 }
+
+     .contact-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #343a40;
+}
+
+.contact-form-container {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.text-md {
+  font-size: 1rem;
+  color: #495057;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.contact-form-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form-btn:hover {
+  background-color: #0056b3;
+}
+
 
  
     </style>
@@ -538,6 +639,44 @@
             </details>
         </div>
     </section>
+
+         <section id="contact" class="contact-section">
+  <div>
+    <p class="sub-title">Get In Touch</p>
+    <h2>Contact Me</h2>
+  </div>
+  <form id="contact-form" class="contact-form-container">
+    <div class="container">
+      <label for="first-name" class="contact-label">
+        <span class="text-md">Your Name</span>
+        <input type="text" class="contact-input text-md" name="from_name" id="first-name" required />
+      </label>
+      <label for="email" class="contact-label">
+        <span class="text-md">Your Email</span>
+        <input type="email" class="contact-input text-md" name="from_email" id="email" required />
+      </label>
+    </div>
+    <label for="message" class="contact-label">
+      <span class="text-md">Message</span>
+      <textarea
+        class="contact-input text-md"
+        id="message"
+        rows="8"
+        name="message"
+        placeholder="Type your message..."
+        required
+      ></textarea>
+    </label>
+    <label for="checkbox" class="checkbox-label">
+      <input type="checkbox" required name="checkbox" id="checkbox" />
+      <span class="text-sm">I accept the terms</span>
+    </label>
+    <div>
+      <button class="btn btn-primary contact-form-btn" type="submit">Submit</button>
+    </div>
+  </form>
+</section>
+
          
     <!-- Footer -->
     <footer>
