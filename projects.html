@@ -221,12 +221,48 @@
             background-color: #005a8e;
         }
 
-        footer {
+       footer {
+            margin-top: 40px;
+            padding: 40px;
+            background-color: #f7f7f7;
             text-align: center;
-            padding: 2rem 0; /* Increased padding */
-            background-color: #f8f8f8;
-            font-size: 1.2rem; /* Increased font size */
-            color: #555;
+        }
+
+        footer .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer .contact a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0073b1;
+        }
+
+        footer .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        footer .icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #777;
         }
     </style>
 </head>
@@ -262,6 +298,9 @@
         </section>
 
         <section id="projects" class="portfolio">
+
+         <h1><centre>Projects</centre></h1>
+         <hr/>
             <!-- Reuse project cards here -->
             <!-- Example card -->
             <div class="portfolio">
@@ -471,9 +510,31 @@
                
             </div>
 
+        <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <h2>FAQ's</h2>
+        <div class="faq-item">
+            <details>
+                <summary>What tools and programming languages are you proficient in?</summary>
+                <p>I am proficient in tools like Git, VS Code, and programming languages like Python, JavaScript, and more.</p>
+            </details>
+        </div>
+        <div class="faq-item">
+            <details>
+                <summary>Do you have any prior experience?</summary>
+                <p>Yes, I have worked on several projects and internships in the field of web development and data science.</p>
+            </details>
+        </div>
+        <div class="faq-item">
+            <details>
+                <summary>What salary range are you expecting?</summary>
+                <p>I am open to discussions and would like a competitive offer based on my skills and experience.</p>
+            </details>
+        </div>
+    </section>
+         
     <!-- Footer -->
     <footer>
-        © 2024 Disha Agarwal. All rights reserved.
     </footer>
 </body>
 </html>
