@@ -11,7 +11,7 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   // Initialize EmailJS
-  emailjs.init("your-public-key-here");
+  emailjs.init("8tlkZWeySUT1S3aXJ");
 
   // Handle form submission
   document.getElementById("contact-form").addEventListener("submit", function (e) {
@@ -19,7 +19,7 @@
 
     const form = e.target;
     emailjs
-      .sendForm("your-service-id", "your-template-id", form)
+      .sendForm("service_7oq5zhe", "template_pw3e8mn", form)
       .then(() => {
         Swal.fire({
           title: "Thank You",
