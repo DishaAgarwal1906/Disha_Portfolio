@@ -237,10 +237,90 @@
         .button:hover {
             background-color: #005a8e;
         }
+        
+
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Styling */
+.contact-section {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-container {
+  width: 90%;
+  max-width: 1000px; /* Full width responsiveness */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Input Fields */
+.contact-input {
+  width: 48%; /* Adjusted to fit two fields in one row */
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.contact-textarea {
+  width: 100%; /* Full width textarea */
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  resize: none;
+  min-height: 150px;
+}
+
+/* Flexbox for Inputs */
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+/* Submit Button */
+.btn-submit {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #333;
+}
+
+
      .faq-section {
             padding: 60px 40px;
             max-width: 1000px;
             margin: auto;
+            margin-top:70px;
         }
 
         .faq-section h2 {
@@ -283,8 +363,11 @@
 
      .contact-section {
   padding: 40px 20px;
-  background-color: #f8f9fa;
+ 
+  margin-left:250px;
   text-align: center;
+  justify-content: center;
+  height: 550px;
 }
 
 .sub-title {
@@ -312,6 +395,7 @@ h2 {
 .text-md {
   font-size: 1rem;
   color: #495057;
+  
 }
 
 .contact-input {
@@ -597,6 +681,24 @@ h2 {
                
             </div>
 
+            <section id="contact" class="contact-section">
+                <div>
+                  <p class="sub-title">Get in touch ⚡</p>
+                  <p>Fill out the form below and I'll get back to you soon.</p>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form-container">
+                  <input type="hidden" name="access_key" value="70f91bfc-02c2-4609-ae17-fd9c1638446d">
+                  <div class="form-group">
+                    <input type="text" name="from_name" placeholder="Name" required class="contact-input">
+                    <input type="email" name="email_id" placeholder="Email" required class="contact-input">
+                  </div>
+                  <textarea name="message" placeholder="Type your message..." required class="contact-textarea"></textarea>
+                  <button type="submit" class="btn-submit">Send ➔</button>
+                </form>
+              </section>
+              
+              
+    
         <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <h2>FAQ's</h2>
@@ -624,39 +726,7 @@ h2 {
             
   <div>
     
-    <p class="sub-title">Get In Touch</p>
-    <h2>Contact Me</h2>
-  </div>
-  <form  action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="contact-form-container">
-    <input type="hidden" name="access_key" value="70f91bfc-02c2-4609-ae17-fd9c1638446d">
-    <div class="container">
-      <label for="first-name" class="contact-label">
-        <span class="text-md">Your Name</span>
-        <input type="text" class="contact-input text-md" name="from_name" id="first-name" required />
-      </label>
-      <label for="email" class="contact-label">
-        <span class="text-md">Your Email</span>
-        <input type="email" class="contact-input text-md" name="email_id" id="email" required />
-      </label>
-    </div>
-    <label for="message" class="contact-label">
-      <span class="text-md">Message</span>
-      <textarea
-        class="contact-input text-md"
-        id="message"
-        rows="8"
-        name="message"
-        placeholder="Type your message..."
-        required -->
-       </textarea>
-    </label>
- 
-    <div>
-      <button class="btn btn-primary contact-form-btn" type="submit">Submit</button>
-    </div>
-  </form>
-</section>
-
+   
          
     <!-- Footer -->
     <footer>
